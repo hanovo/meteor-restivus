@@ -22,6 +22,7 @@ Package.onUse(function (api) {
     'lib/restivus.js'
   ], 'server');
   api.mainModule('index.js', 'server');
+  api.export('Restivus', 'server');
 });
 
 Package.onTest(function (api) {
