@@ -2,7 +2,8 @@ Package.describe({
   name: 'hanovo:restivus',
   summary: 'Create authenticated REST APIs in Meteor via HTTP/HTTPS. Setup CRUD endpoints for Collections.',
   version: '1.1.0',
-  git: 'https://github.com/hanovo/meteor-restivus.git'
+  git: 'https://github.com/hanovo/meteor-restivus.git',
+  documentation: 'README.md'
 });
 
 Package.onUse(function (api) {
