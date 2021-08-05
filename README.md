@@ -72,13 +72,16 @@ and is built on top of [Simple JSON Routes][json-routes] to provide:
 ## Installation
 
 You can install Restivus using Meteor's package manager:
-因为还没有上传到官方的 atmospherejs ，使用本地包的方式添加，主要是兼容了meteor 2.3.2+
+本地包的方式添加，主要是兼容了meteor 2.3.2+ local package installation , compatition for meteor 2.3.2
 ```bash
 > mkdir packages && cd packages
 > git clone https://github.com/hanovo/meteor-restivus.git
 > meteor add hanovo:restivus
 ```
-
+直接使用在线包  or use online package
+```bass
+> meteor add hanovo:restivus
+```
 ## Quick Start
 
 Often, the easiest way to explain something is by example, so here's a short example of what it's
