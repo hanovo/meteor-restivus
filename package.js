@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'vatfree:restivus',
+  name: 'hanovo:restivus',
   summary: 'Create authenticated REST APIs in Meteor via HTTP/HTTPS. Setup CRUD endpoints for Collections.',
   version: '1.2.0',
   git: 'https://github.com/vatfree/meteor-restivus.git'
