@@ -1,21 +1,20 @@
 Package.describe({
-  name: 'hanovo:restivus',
+  name: 'vatfree:restivus',
   summary: 'Create authenticated REST APIs in Meteor via HTTP/HTTPS. Setup CRUD endpoints for Collections.',
-  version: '1.1.0',
-  git: 'https://github.com/hanovo/meteor-restivus.git',
-  documentation: 'README.md'
+  version: '1.2.0',
+  git: 'https://github.com/vatfree/meteor-restivus.git'
 });
 
 Package.onUse(function (api) {
-  api.versionsFrom('1.10');
+  api.versionsFrom(['2.7']);
 
   // Meteor dependencies
   api.use('ecmascript');
   api.use('check');
   api.use('underscore');
-  api.use('accounts-password@2.0.0');
+  api.use('accounts-password');
   api.use('simple:json-routes@2.1.0');
-  api.use('alanning:roles@3.3.0', 'server', {weak: true});
+  api.use('alanning:roles@1.3.0', 'server', {weak: true});
 
   api.addFiles([
     'lib/auth.js',
@@ -23,25 +22,5 @@ Package.onUse(function (api) {
     'lib/restivus.js'
   ], 'server');
   api.mainModule('index.js', 'server');
-  api.export('Restivus', 'server');
-});
-
-Package.onTest(function (api) {
-  // Meteor dependencies
-  api.use('ecmascript');
-  api.use('mongo');
-  api.use('http');
-  api.use('underscore');
-  api.use('accounts-base');
-  api.use('accounts-password');
-  api.use('practicalmeteor:munit');
-  api.use('test-helpers');
-  api.use('alanning:roles');
-
-  api.addFiles([
-      'test/api_tests.js',
-      'test/authentication_tests.js',
-      'test/route_unit_tests.js',
-      'test/user_hook_tests.js'
-  ], 'server');
+  api.export(['Restivus']);
 });
